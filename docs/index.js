@@ -1996,7 +1996,7 @@
 		 * @return {Object}
 		 */function getTranslation(viewport){var x=void 0;var y=void 0;// Modulus 360 on the rotation so that we only
 	// have to worry about four possible values.
-	switch(viewport.rotation%360){case 0:x=y=0;break;case 90:x=0;y=viewport.width/viewport.scale*-1;break;case 180:x=viewport.width/viewport.scale*-1;y=viewport.height/viewport.scale*-1;break;case 270:x=viewport.height/viewport.scale*-1;y=0;break;}return{x:x,y:y};}/**
+	switch(viewport.rotation%360){case 0:x=y=0;break;case 90:x=0;y=viewport.width/viewport.scale*-1;break;case 180:x=viewport.width/viewport.scale*-1;y=viewport.height/viewport.scale*-1;break;case 270:x=viewport.height/viewport.scale*-1;y=0;break;case -270:x=y=0;break;case 90:x=0;y=viewport.width/viewport.scale*-1;break;case -180:x=viewport.width/viewport.scale*-1;y=viewport.height/viewport.scale*-1;break;case -90:x=viewport.height/viewport.scale*-1;y=0;break;}return{x:x,y:y};}/**
 		 * Transform the rotation and scale of a node using SVG's native transform attribute.
 		 *
 		 * @param {Node} node The node to be transformed
